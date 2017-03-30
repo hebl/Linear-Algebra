@@ -1,0 +1,62 @@
+\chapter{向量}
+
+\section{向量的几何表示}
+
+\subsection{行图像}
+
+行图像是线性方程组所构成的图像，在二元线性方程组中，每个方程组代表一条直线，求接就是求二线的交点。
+
+\subsection{列图像}
+
+列图像是列向量，在图像中表现为向量的运算。
+
+\subsection{矩阵图像}
+
+矩阵图像：$\MA x=\Sb$
+
+\section{向量长度和点积}
+
+\subsection{点积}
+
+\kt{dot product} or \kt{inner product}
+
+$$\Sv \cdot \Sw = \sum_{i=1}^{n}\Sv_i \cdot \Sw_i$$
+
+\subsection{长度}
+
+\kt{length}就是向量的范数：
+
+$$\norm{\Sv} = \sqrt{\Sv \cdot \Sv}$$
+
+长度为1的向量是单位向量 \kt{unit vector}。
+
+\section{矩阵}
+
+\subsection{矩阵乘法}
+
+$$\MA \MB = \MC$$
+
+$$c_{ij} = \sum_{k=1}^{n}a_{ik}b_{kj}$$
+
+\kw{分块}
+
+\begin{equation}
+        \begin{bmatrix}
+            A_{1} & A_{2} \\
+            A_{3} & A_{4} \\
+        \end{bmatrix} 
+        \begin{bmatrix}
+            B_{1} & B_{2} \\
+            B_{3} & B_{4} \\
+        \end{bmatrix} = 
+        \begin{bmatrix}
+            C_{1} & C_{2} \\
+            C_{3} & C_{4} \\
+        \end{bmatrix} 
+\end{equation}
+
+$$C_1 = A_1B_1 + A_2B_3$$
+
+\subsection{逆矩阵}
+
+$$\MA \MA^{-1} = \MI$$

@@ -1,0 +1,48 @@
+\chapter{线性方程组}
+
+\section{消元法} 
+
+\kt{Elimination}
+
+\subsection{置换矩阵} 
+
+置换矩阵（\kt{permutation matrix}） $\MP$是一个每行或者每列都只有一个1的矩阵，因此可以使用一个数组存储，置换矩阵与矩阵相乘可以实现矩阵的行或者列交换。
+
+\kt{行交换} 置换矩阵乘矩阵
+
+$$\MP \MA$$
+
+\kt{列交换} 矩阵乘置换矩阵
+
+$$\MA \MP$$
+
+置换矩阵有一个重要的性质：
+
+$$\MP^{-1} = \MP^{T}$$
+
+\section{逆矩阵}
+
+$$\MA \MA^{-1} = \MI$$
+
+$$(\MA \MB)^{-1} = \MB^{-1}\MA{-1}$$
+
+$$(\MA \MB \MC)^{-1} = \MC^{-1}\MB^{-1}\MA^{-1}$$
+
+\subsection{Gauss-Jordan 消元法}
+
+Gauss-Jordan 消元法求逆矩阵
+
+\begin{equation}
+    \begin{bmatrix}
+       \MA & \MI
+    \end{bmatrix} 
+    \Longrightarrow
+    \begin{bmatrix}
+        \MI & \MA^{-1}
+    \end{bmatrix} 
+\end{equation}
+
+\section{$\MA = \ML\MU$}
+
+
+$$\MA = \ML\MU$$

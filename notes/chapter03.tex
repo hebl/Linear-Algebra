@@ -1,0 +1,101 @@
+\chapter{向量空间与子空间}
+
+\section{向量空间}
+
+\kw{定义}
+
+向量空间$\SetR^{n}$包含了有$n$个元素的所有列向量$\RVv$。
+
+向量空间是一个封闭的空间，在空间内，对加法和标量乘法是封闭的。
+
+\subsection{性质}
+
+\begin{ul}
+  \item \kt{交换性 commutativity} $\RVu + \RVv  = \RVv + \RVu$
+  \item \kt{结合性 associativity} $(\RVu+\RVv)+\RVw = \RVu + (\RVv+\RVw)$
+  \item \kt{加法单元位 additive identity} $\RVv+\mathbf{0}=\RVv$
+  \item \kt{加法逆 additive inverse} $\RVv + \RVw = \mathbf{0}$
+  \item \kt{乘法单元位 multiplicative identity} $\mathbf{1}\RVv=\RVv$
+  \item \kt{分配性质 distributive properties} $a(\RVu+\RVv) = a\RVu+a\RVv$
+\end{ul}
+
+\subsection{子空间}
+
+向量空间的子集，子空间也是向量空间，对加法和标量乘法也是封闭的。
+
+\kw{典型子空间}
+
+$\SetR^{2}$的子空间有：
+
+\begin{ol}
+  \item 自身，所有$\SetR^{2}$
+  \item 通过原点$(0,0)$的所有直线
+  \item 零向量
+\end{ol}
+
+$\SetR^{3}$的子空间有：
+
+\begin{ol}
+  \item 自身，所有$\SetR^{3}$
+  \item 通过原点$(0,0,0)$的所有平面
+  \item 通过原点$(0,0,0)$的所有直线
+  \item 零向量
+\end{ol}
+
+\subsection{列空间}
+
+\kt{Column Space} $C(\MA)$：列空间包含了矩阵$\MA$中列的所有线性组合。
+
+对于$\MA\Vx = \Vb$，可解当且仅当$\Vb$属于$C(\MA)$。
+
+对于$m \times n$矩阵$\MA$，列空间位$\SetR^{m}$。
+
+\section{零空间和$\MA\Vx = 0$}
+
+\kt{Nullspace} $N(\MA)$：零空间包含了$\MA\Vx = 0$的所有解。
+
+求解$\MA\Vx = 0$
+
+$\MA$经过消元后$\MU$，可以将转化为$\MR$ \kt{reduced row echelon form(rref) }  
+
+
+$$\MR = 
+    \begin{bmatrix}
+        \MI & \MF \\
+        0 & 0 \\
+    \end{bmatrix} 
+$$
+
+$\MI$是$\Vr \times \Vr$的单位矩阵，$\Vr$是矩阵的秩（\kt{rank}）；$\MF$是自由列（无主元的列），$\MI$和$\MF$是可以混合的。
+
+如果$\MN$是一个零空间：$\begin{bmatrix}
+        -\MF \\
+        \MI \\
+    \end{bmatrix} $，则$\MR\MN = 0$。$\MI$是$\Vn-\Vr \times \Vn-\Vr$的单位矩阵。$\MN$的列就是特解。
+
+
+\section{$\MA\Vx = \Vb$的所有解}
+
+$$\MA\Vx = \Vb$$
+
+$\Vx_{p}$  $\MA\Vx_{p} = \Vb$ 一个特解
+
+$\Vx_{n}$  $\MA\Vx_{n} = 0$ $n$个零解
+
+$$\Vx = \Vx_p + \Vx_n$$
+
+\begin{table}[!ht]
+    \centering
+    \caption{秩与解}
+    \label{table:rank}
+    {\renewcommand{\arraystretch}{2}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+         & $r = m = n$ & $r = n < m$ & $r = m < n$ & $r<m, r < n$ \\ \hline
+        $\MR$ & $\MI$ & $\begin{bmatrix} \MI \\ 0 \\ \end{bmatrix}$ & $\begin{bmatrix} \MI & \MF \\ \end{bmatrix}$ & $\begin{bmatrix} \MI & \MF \\ 0 & 0 \\ \end{bmatrix}$ \\
+         $\MA\Vx = \Vb$ 的解 & 1 & 0或1 & $\infty$ & 0或$\infty$ \\
+        \hline
+    \end{tabular}}
+\end{table}
+
+

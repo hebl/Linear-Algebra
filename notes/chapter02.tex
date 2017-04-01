@@ -42,7 +42,33 @@ Gauss-Jordan 消元法求逆矩阵
     \end{bmatrix} 
 \end{equation}
 
-\section{$\MA = \ML\MU$}
+\section{LU分解}
 
 
-$$\MA = \ML\MU$$
+$$\MP\MA = \ML\MU$$
+
+\section{转置矩阵}
+
+\kt{Transpose}
+
+$$(\MA^T)_{ij} = \MA_{ji}$$
+
+\kw{性质}
+
+\begin{ul}
+ \item $(\MA\MB)^T = \MB^T \MA^T$
+ \item $(\MA^{-1})^T = (\MA^T)^{-1}$
+\end{ul}
+
+\kw{对称矩阵}
+
+\kt{symmetric matrix}
+
+$$\MA^T = \MA$$
+
+任意矩阵$\MR$
+
+$$(\MR^T \MR)^T = \MR^T(\MR^T)^T = \MR^T\MR$$
+
+因此：$\MR^T \MR$ 必然是一个对称矩阵。
+

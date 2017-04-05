@@ -99,3 +99,34 @@ $$\Vx = \Vx_p + \Vx_n$$
 \end{table}
 
 
+\section{线性无关、基和维数}
+
+$$A = A_{m,n}$$
+
+\subsection{线性无关}
+
+\kw{线性无关} 矩阵$\MA$的列线性无关当且仅当$\MA \Vx = 0$只有$\Vx = 0$一个解。
+
+一组向量$\RVv_1, \cdots, \RVv_n$\kt{线性无关} 当且仅当 $0\RVv_1 + \cdots + 0\RVv_n = 0$一个解。
+
+矩阵$MA$的\kt{列秩}$r$是满秩，也就是$r = n$时，这时有$n$个主元，无自由变量。仅有$\Vx = 0$在零空间中。
+
+\subsection{长成}
+
+\kw{张成 Span} 指的是一组向量$\RVv_1, \cdots, \RVv_n$通过线性组合构成的子空间
+
+\subsection{基和维数}
+
+\kw{基} 是一组向量组成的向量空间，包括两个性质：基向量是线性无关的；基向量张成向量空间。
+
+\kt{基}是可逆的。
+
+$\MV$中向量组$(\RVv_1, \cdots, \RVv_n)$是$\MV$的基当且仅当每个$\RVv \in \MV$都能唯一的写成：
+
+$$\RVv = a_1\RVv_1 + \cdots + a_n\RVv_n$$
+
+\kw{维数}是每个基向量的个数。
+
+$$\mathrm{Rank}(\MA) = \MA \kt{列主元数目} = \mathrm{Dim}\ C(\MA)$$
+
+$$\mathrm{Dim}\ N(\MA) = \MA \kt{自由变量数目} = n - r$$
